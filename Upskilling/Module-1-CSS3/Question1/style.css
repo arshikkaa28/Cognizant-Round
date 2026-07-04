@@ -1,0 +1,17 @@
+/* Header Styles */
+h2{
+    color: navy;
+    text-align: center;
+}
+
+/* Paragraph Styles */
+p{
+    color: green;
+    font-size: 18px;
+}
+
+/* Body Content */
+body{
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}

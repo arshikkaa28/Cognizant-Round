@@ -1,0 +1,35 @@
+/* Body Styles */
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+/* Main Heading */
+h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: darkblue;
+}
+
+/* Sub Heading */
+h2{
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 600;
+    color: darkgreen;
+}
+
+/* Description */
+p{
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: justify;
+    letter-spacing: 1px;
+    line-height: 30px;
+    color: #333;
+}
