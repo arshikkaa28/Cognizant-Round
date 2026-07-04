@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Feedback Form</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container{
+            width: 450px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        h2{
+            text-align: center;
+        }
+
+        label{
+            font-weight: bold;
+        }
+
+        input, select, textarea{
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+        img{
+            width: 150px;
+            height: 100px;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+
+        button{
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #fee,#count{
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Event Feedback Form</h2>
+
+<form>
+
+<label>Phone Number</label>
+<input type="text" id="phone" onblur="validatePhone()">
+
+<label>Select Event</label>
+<select id="event" onchange="showFee()">
+    <option value="">Select Event</option>
+    <option value="200">Tree Plantation</option>
+    <option value="300">Blood Donation</option>
+    <option value="400">Health Camp</option>
+</select>
+
+<p id="fee"></p>
+
+<label>Feedback</label>
+<textarea id="feedback"
+          rows="5"
+          onkeyup="countCharacters()"
+          placeholder="Write your feedback..."></textarea>
+
+<p id="count">Characters: 0</p>
+
+<p><b>Double Click the Image</b></p>
+
+<img src="images/event1.png"
+     ondblclick="enlargeImage(this)"
+     alt="Event Image">
+
+<br><br>
+
+<button type="button" onclick="submitForm()">
+Submit
+</button>
+
+</form>
+
+</div>
+
+<script>
+
+function validatePhone()
+{
+    let phone=document.getElementById("phone").value;
+
+    if(phone.length!=10)
+    {
+        alert("Phone number must contain 10 digits.");
+    }
+}
+
+function showFee()
+{
+    let fee=document.getElementById("event").value;
+
+    if(fee!="")
+    {
+        document.getElementById("fee").innerHTML="Event Fee : ₹"+fee;
+    }
+}
+
+function submitForm()
+{
+    alert("Feedback Submitted Successfully!");
+}
+
+function enlargeImage(img)
+{
+    img.style.width="300px";
+    img.style.height="200px";
+}
+
+function countCharacters()
+{
+    let text=document.getElementById("feedback").value;
+
+    document.getElementById("count").innerHTML=
+    "Characters : "+text.length;
+}
+
+</script>
+
+</body>
+</html>

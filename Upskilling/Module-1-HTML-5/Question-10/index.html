@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debugging Demo</title>
+
+    <style>
+        #box{
+            width:200px;
+            height:100px;
+            background-color:skyblue;
+            text-align:center;
+            line-height:100px;
+            margin:20px;
+            border:2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Chrome DevTools Debugging Demo</h2>
+
+<div id="box">Debug Me</div>
+
+<button onclick="calculate()">Click Me</button>
+
+<script>
+
+function calculate()
+{
+    let a = 10;
+    let b = 20;
+    let sum = a + b;
+
+    console.log("Value of a:", a);
+    console.log("Value of b:", b);
+    console.log("Sum:", sum);
+
+    document.getElementById("box").innerHTML = "Sum = " + sum;
+}
+
+</script>
+
+</body>
+</html>
