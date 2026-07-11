@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+======================================================
+Exercises Covered
+
+Exercise 1 : Bean Configuration
+Exercise 2 : Setter Dependency Injection
+Exercise 5 : Spring IoC Container
+Exercise 7 : Constructor & Setter Injection
+======================================================
+-->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!-- ========================================== -->
+    <!-- Exercise 1 & 5 : Repository Bean           -->
+    <!-- ========================================== -->
+
+    <bean id="bookRepository"
+          class="com.library.repository.BookRepository"/>
+
+
+    <!-- ========================================== -->
+    <!-- Exercise 2 : Setter Injection              -->
+    <!-- ========================================== -->
+
+    <bean id="bookServiceSetter"
+          class="com.library.service.BookService">
+
+        <property name="bookRepository"
+                  ref="bookRepository"/>
+
+    </bean>
+
+
+    <!-- ========================================== -->
+    <!-- Exercise 7 : Constructor Injection         -->
+    <!-- ========================================== -->
+
+    <bean id="bookServiceConstructor"
+          class="com.library.service.BookService">
+
+        <constructor-arg ref="bookRepository"/>
+
+    </bean>
+
+</beans>
