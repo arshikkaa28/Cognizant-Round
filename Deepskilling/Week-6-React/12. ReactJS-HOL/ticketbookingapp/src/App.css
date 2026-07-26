@@ -1,0 +1,21 @@
+.App{
+  text-align:center;
+  font-family:Arial;
+  margin-top:30px;
+}
+
+table{
+  margin:auto;
+  border-collapse:collapse;
+}
+
+th,td{
+  border:1px solid black;
+  padding:10px 20px;
+}
+
+button{
+  padding:10px 20px;
+  font-size:16px;
+  cursor:pointer;
+}
